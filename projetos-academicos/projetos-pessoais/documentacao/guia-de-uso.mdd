@@ -1,0 +1,14 @@
+# Guia de Uso do Repositório
+
+Este repositório foi criado com o objetivo de organizar meus projetos acadêmicos e pessoais em um só lugar. Ele está estruturado da seguinte forma:
+
+- **projetos-academicos/**: Contém projetos desenvolvidos durante meus estudos.
+- **projetos-pessoais/**: Contém projetos desenvolvidos por iniciativa própria.
+- **documentacao/**: Contém guias e informações adicionais sobre o repositório.
+
+## Como Navegar
+1. Clique nas pastas para explorar os projetos.
+2. Cada projeto contém um arquivo `README.md` com instruções.
+
+## Licença
+Todos os projetos estão sob a licença MIT.
