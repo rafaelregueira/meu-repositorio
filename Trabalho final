@@ -1,0 +1,72 @@
+Algoritmo "Sistema de Trassporte"
+// Disciplina   : [Linguagem e L�gica de Programa��o]
+// Professor   : Antonio Carlos Nicolodi 
+// Descri��o   : Aqui voc� descreve o que o programa faz! (fun��o)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 05/12/2025
+Var
+// Se��o de Declara��es das vari�veis 
+// Vari�veis de Entrada do Passageiro
+distancia_km: Real
+tipo_carro: Inteiro // 1 para Comum, 2 para Luxo
+preco_por_km: Real
+valor_total: Real
+saldo_cliente: Real
+confirmacao: Caractere
+
+
+Inicio
+Escreval("--- BEM-VINDO AO APP DE TRANSPORTE ---")
+
+// 1. Entrada de Dados
+Escreva("Quantos Km tem a sua viagem? ")
+Leia(distancia_km)
+
+Escreval("Escolha o tipo de carro:")
+Escreval("1 - Comum (R$ 3,00 por Km)")
+Escreval("2 - Luxo (R$ 5,00 por Km)")
+Escreva("Op��o: ")
+Leia(tipo_carro)
+
+// 2. Defini��o do Pre�o (L�gica Simples)
+Se (tipo_carro = 1) Entao
+preco_por_km <- 3.00
+Senao
+preco_por_km <- 5.00
+FimSe
+
+// 3. C�lculo
+valor_total <- distancia_km * preco_por_km
+
+Escreval("--------------------------------")
+Escreval("Valor da corrida: R$ ", valor_total:5:2)
+Escreval("--------------------------------")
+
+// 4. Confirma��o
+Escreva("Deseja confirmar a corrida? (S/N): ")
+Leia(confirmacao)
+
+Se (confirmacao = "S") ou (confirmacao = "s") Entao
+Escreval("Procurando motorista...")
+Escreval ("-----------------------------------------")
+Escreval("Motorista encontrado! Viagem iniciada...")
+// Simula um tempo de espera
+Escreval("..........")
+Escreval("Voc� chegou ao destino!")
+
+// 5. Pagamento
+Escreva("Digite seu saldo dispon�vel para pagar: R$ ")
+Leia(saldo_cliente)
+
+Se (saldo_cliente >= valor_total) Entao
+Escreval("Pagamento realizado com sucesso!")
+Escreval("Saldo restante: R$ ", (saldo_cliente - valor_total):5:2)
+Escreval("Obrigado pela prefer�ncia!")
+Senao
+Escreval("Saldo INSUFICIENTE. Pagamento falhou.")
+FimSe
+
+Senao
+Escreval("Corrida cancelada.")
+FimSe
+Fimalgoritmo
